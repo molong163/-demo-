@@ -54,6 +54,17 @@ export const constantRoutes = [
       meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
+  {
+    path: '/addForm',
+    component: Layout,
+    redirect: '/addForm',
+    children: [{
+      path: 'addForm',
+      name: 'addForm',
+      component: () => import('@/views/addForm/index.vue'),
+      meta: { title: '动态新增表单', icon: 'dashboard' }
+    }]
+  },
 
   {
     path: '/example',
